@@ -16,6 +16,9 @@
     "url": "https://github.com/novemberborn/cached-module-loader/issues"
   },
   "homepage": "https://github.com/novemberborn/cached-module-loader#readme",
+  "engines": {
+    "node": ">=6"
+  },
   "devDependencies": {
     "@novemberborn/as-i-preach": "^5.0.0"
   }
