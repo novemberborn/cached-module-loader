@@ -1,0 +1,19 @@
+{
+  "name": "cached-module-loader",
+  "version": "0.0.0",
+  "description": "Highly experimental bundler and loader of Node.js modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novemberborn/cached-module-loader.git"
+  },
+  "author": "Mark Wubben (https://novemberborn.net/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/novemberborn/cached-module-loader/issues"
+  },
+  "homepage": "https://github.com/novemberborn/cached-module-loader#readme"
+}
