@@ -1,6 +1,6 @@
 {
   "name": "cached-module-loader",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Highly experimental bundler and loader of Node.js modules",
   "main": "index.js",
   "scripts": {
