@@ -14,3 +14,15 @@ cml.bundleDependencies('babel-core').then(bundle => {
   // And now use babel!
 })
 ```
+
+## Performance tests
+
+Clone this repository, then:
+
+```sh
+npm install
+node perf-tests/create-cache-data.js
+
+time node perf-tests/require-with-cached-data.js
+time node perf-tests/raw-require.js
+```
