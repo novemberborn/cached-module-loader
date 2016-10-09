@@ -18,7 +18,7 @@ Promise.all([
   read(join(__dirname, '.cached-code.js'))
 ]).then(([cachedData, code]) => {
   const babel = loadInThisContext(require.resolve('babel-core'), module, {
-    mid: 'babel-core',
+    moduleId: 'babel-core',
     cachedData,
     code
   })
