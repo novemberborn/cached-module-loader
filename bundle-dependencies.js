@@ -63,7 +63,7 @@ function load (filename, parent) {
   let threw = true
   try {
     const { dirname, compiledWrapper } = files.get(filename)
-    const require = makeRequireFunction(module)
+    const require = makeRequireFunction(module, dirname)
     const args = [module.exports, require, module, filename, dirname]
     compiledWrapper.apply(module.exports, args)
     threw = false
@@ -76,7 +76,8 @@ function load (filename, parent) {
   return module.exports
 }
 
-function makeRequireFunction(module) {
+let resolveFrom;
+function makeRequireFunction(module, dirname) {
   const Module = module.constructor
 
   function require (path) {
@@ -84,11 +85,14 @@ function makeRequireFunction(module) {
       return load(path, module)
     }
 
-    return module.require(path)
+    return module.require(resolve(path))
   }
 
   function resolve (request) {
-    return Module._resolveFilename(request, module)
+    if (!resolveFrom) {
+      resolveFrom = module.require(${JSON.stringify(require.resolve('resolve-from'))});
+    }
+    return resolveFrom(dirname, request)
   }
   require.resolve = resolve
 
